@@ -2,7 +2,7 @@ liczba_1 = int(input("Podaj liczbę pierwszą: "))
 liczba_2 = int(input("Podaj liczbę drugą: "))
 operacja = input("Rodzaj operacji: ")
 
-wynik = "nieustalono"
+wynik = "nieustalony wynik"
 
 if operacja == "+":
     wynik = liczba_1 + liczba_2
