@@ -15,9 +15,11 @@ stopien = "Kapitan"
 
 # print("Stopień: ", stopien)
 # print("Imię: ", imie)
-output = f"""Stopień: {stopien}
+output = f"""
 Imię: {imie}
-Nazwisko: {nazw}"""
+Nazwisko: {nazw}
+Stopień: {stopien}
+"""
 
 
 print(output)
