@@ -1,13 +1,9 @@
 def wiecej_niz(napis, prog):
-    liczniki_liter = {}
     wynik = set()
-
+    napis = napis.lower()
     for litera in napis:
-        litera = litera.lower()
-        liczniki_liter[litera] = liczniki_liter.get(litera, 0) + 1
-    for key, value in liczniki_liter.items():
-        if value > prog:
-           wynik.add(key)
+        if napis.count(litera) > prog:
+            wynik.add(litera)
     return wynik
 
 
