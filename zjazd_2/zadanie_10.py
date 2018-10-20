@@ -3,10 +3,7 @@ liczniki_liter = {}
 
 # zliczyć
 for litera in napis:
-    if litera in liczniki_liter:
-        liczniki_liter[litera] = liczniki_liter[litera] + 1
-    else:
-        liczniki_liter[litera] = 1
+    liczniki_liter[litera] = liczniki_liter.get(litera, 0) + 1
 
 # wyświetlić
 for litera in liczniki_liter:
