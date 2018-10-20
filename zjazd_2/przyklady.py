@@ -38,6 +38,12 @@ print("Produkty w lodówce: ")
 for p in produkty:
     print(p['nazwa'])
 
-
 for k in produkt1:
     print(k, produkt1[k])
+
+a = {"a": 1, "b": 2}
+b = {"b":3, "d": 4}
+
+print(dir(a))
+a.update(b)
+print(a)
