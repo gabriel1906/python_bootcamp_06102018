@@ -1,5 +1,8 @@
 napis = input("Podaj napis: ")
 liczniki_liter = {}
-# w podanym napisie zliczyć wystąpienia poszczególnych liter
-for litera in napis:
-    print(litera)
+
+# zliczyć
+
+# wyświetlić
+for litera in liczniki_liter:
+    print(f"litera: {litera} wystąpiła {liczniki_liter[litera]} razy")
