@@ -47,3 +47,21 @@ b = {"b":3, "d": 4}
 print(dir(a))
 a.update(b)
 print(a)
+
+kwadraty = {(x, x**2, x**3) for x in range(1, 101)}
+
+# kwadraty = []
+# for x in range(1, 101):
+#     kwadraty.append(x**2)
+
+print(kwadraty)
+
+print([i/10 for i in range(11)])
+
+zbior_napisow = {'abc', 'ala ma kota', 'słowacki wielkim poeta był', 'Superman'}
+
+print({x:len(x) for x in zbior_napisow})
+
+print([x for x in range(1, 101) if x%3==0])
+
+print([[y for y in range(20)] for x in range(1, 101) if x%3==0])
