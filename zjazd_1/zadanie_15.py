@@ -67,3 +67,4 @@ while True:
 print(f"Położenie skarbu: x={skarb_x}, y={skarb_y}")
 print(f"Położenie gracza: x={gracz_x}, y={gracz_y}")
 print(minimalna_liczba_krokow_po_wylosowaniu)
+

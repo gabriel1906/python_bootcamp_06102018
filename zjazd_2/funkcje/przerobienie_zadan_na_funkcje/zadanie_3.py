@@ -1,19 +1,14 @@
 
-imie = "Rafał"
-wzrost = 181
-
-# sposób 1
-print("Imię:", imie)
-print("Wzrost:", wzrost)
-
-# sposób 2
-output1 = f"Imię: {imie}\nWzrost: {wzrost}"
-print(output1)
-
-output2 = f"""Opis faceta:
+def prezentuj_osobe(imie, wzrost):
+    wynik = f"""Opis faceta:
     Imię: {imie}
     Wzrost: {wzrost}
 """
+    return wynik
 
-print(output2)
 
+def test_prezentuj_osobe():
+    assert prezentuj_osobe("Rafał", 181) == """Opis faceta:
+    Imię: Rafał
+    Wzrost: 181
+"""

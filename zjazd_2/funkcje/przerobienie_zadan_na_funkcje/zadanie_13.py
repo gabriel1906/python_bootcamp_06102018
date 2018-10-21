@@ -1,25 +1,28 @@
-LICZBA_DNI_TYGODNIA = 7
+def pobieranie_danych(ile_razy=7):
+    temperatury = []
+    for i in range(ile_razy):
+        temp = int(input(f"Podaj temperaturę z dnia {i+1}: "))
+        temperatury.append(temp)
+    return temperatury
 
-numer_dnia = 1
-suma_temperatur = 0
 
-min_ = None
-max_ = None
+def srednia_temp(temperatury):
+    return sum(temperatury) / len(temperatury)
 
-while numer_dnia <= LICZBA_DNI_TYGODNIA:
-    temp = int(input(f"Podaj temperaturę z dnia {numer_dnia}: "))
-    suma_temperatur += temp
 
-    if min_ is None or temp < min_:
-        min_ = temp
+def znajdz_ekstrma(temperatury):
+    min_ = min(temperatury)
+    max_ = max(temperatury)
+    return min_, max_
 
-    if max_ is None or temp > max_:
-        max_ = temp
 
-    numer_dnia += 1
+def prezentuj_dane(srednia_temperatura, min_, max_):
+    print(f'Srednia temperatura w tygodniu to {srednia_temperatura}')
+    print(f'Temperatura minimalna to było: {min_}')
+    print(f'Temperatura maksymalna to było: {max_}')
 
-srednia_temperatur = suma_temperatur / LICZBA_DNI_TYGODNIA
 
-print(f'Srednia temperatura w tygodniu to {srednia_temperatur}')
-print(f'Temperatura minimalna to było: {min_}')
-print(f'Temperatura maksymalna to było: {max_}')
+dane = pobieranie_danych()
+sr_temp = srednia_temp(dane)
+min_, max_ = znajdz_ekstrma(dane)
+prezentuj_dane(sr_temp, min_, max_)
