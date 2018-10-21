@@ -4,7 +4,8 @@ def policz_znaki(napis, start="<", end=">"):
     for znak in napis:
         if znak == "<":
            poziom_zaglebienia += 1
-
+        if znak == ">":
+           poziom_zaglebienia -= 1
     return poziom_zaglebienia
 
 
@@ -20,6 +21,8 @@ def test_1_poziom_zaglebienia():
 def test_3_poziom_zaglebienia():
     assert policz_znaki("to <jest <nap<is") == 3
 
+def test_2_poziom_zaglebienia():
+    assert policz_znaki("to <jest <nap<is>") == 2
 
 #
 #
